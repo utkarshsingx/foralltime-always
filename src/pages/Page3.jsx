@@ -1,10 +1,12 @@
-import React, { useRef, useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
+import React, { useRef, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Page3() {
   const audioRef = useRef(null);
   const videoRef = useRef(null);
-//   const navigate = useNavigate();
+  const navigate = useNavigate();
+
+  const [codeInput, setCodeInput] = useState("");
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -36,57 +38,81 @@ function Page3() {
     audioRef.current.pause();
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (codeInput.trim().toLowerCase() === "altairvega") {
+      navigate("/page4");
+    } else {
+      alert("That's not quite the final code. Look deeper.");
+    }
+  };
+
   return (
     <div style={styles.container}>
-      {/* 🎵 Background Music */}
       <audio ref={audioRef} loop src="/audio/jumpup.mp3" />
 
-      <h2>you are not so for a goldfish afterall</h2>
+      <h2>You’re not such a goldfish after all...</h2>
 
+      {/* Step 1 */}
       <div style={styles.riddleBlock}>
         <p>
-          <strong>Step 1:</strong> Head over to my Insta post (the funny one)
-          with the caption:
+          <strong>Step 1:</strong> Go to my <strong>Pinterest profile</strong> — the one filled with inspiration and dreams.
+          <br />
+          If you’ve been paying attention, you already know my username. 😉
         </p>
         <blockquote style={styles.quote}>
-          “You’re cute when confused.”
+          (Hint: It’s the same everywhere, dum dum.)
         </blockquote>
         <p>
-          Use <strong>ROT13</strong> to decode this clue:
-        </p>
-        <code style={styles.code}>
-          Gur arkg fgbc vf gur pyhr lbh srry jvyy rirelguvat punatr.
-        </code>
-        <p>
-          This gives you the <strong>first half</strong> of your next link.
+          Find the <strong>inspirational board</strong>, search for a whisper among the pins. That’s your <strong>first code</strong>. Keep it safe.
         </p>
       </div>
 
-      <hr style={{ width: "60%" }} />
+      {/* 🎥 Video in between */}
+      <div style={styles.videoBlock}>
+        <h3>🎥 A Secret Shared...</h3>
+        <p>This is something I watch when I need cheering up. So now you know, ha.</p>
+        <video
+          ref={videoRef}
+          src="/video/jumpupvid.mp4"
+          width="480"
+          controls
+          onPlay={handleVideoPlay}
+          style={{ marginTop: "20px", borderRadius: "12px" }}
+        />
+      </div>
 
+      {/* Step 2 */}
       <div style={styles.riddleBlock}>
+        <hr style={{ width: "60%", margin: "30px auto" }} />
         <p>
-          <strong>Step 2:</strong> Scan the QR code sent to you privately.
+          <strong>Step 2:</strong> Now scan the <strong>QR code</strong> I gave you.
         </p>
         <p>
-          That gives the <strong>second half</strong> of the same link.
+          That’ll lead you to a mysterious piece of text. Copy it carefully.
         </p>
-        <p>Put them together, and unlock the next world of stars ✨</p>
+        <p>
+          Then combine both clues. Use a decoder — maybe ROT13, Caesar, or something a little more magical 🧪.
+        </p>
+        <p>
+          The decoded message is your key to the stars... enter it below and we move onward ✨
+        </p>
       </div>
 
-
-
-      <h3>🎥 A Message Appears...</h3>
-      <p>Before you go, this may give you a clue or make you laugh again.</p>
-
-      <video
-        ref={videoRef}
-        src="/video/jumpupvid.mp4"
-        width="480"
-        controls
-        onPlay={handleVideoPlay}
-        style={{ marginTop: "20px", borderRadius: "12px" }}
-      />
+      {/* Input box for final code */}
+      <form onSubmit={handleSubmit} style={{ marginTop: "30px" }}>
+        <input
+          type="text"
+          value={codeInput}
+          onChange={(e) => setCodeInput(e.target.value)}
+          placeholder="Enter the decoded code"
+          style={styles.input}
+        />
+        <br />
+        <button type="submit" style={styles.button}>
+          🌌 Unlock the Stars
+        </button>
+      </form>
 
       <button onClick={toggleAudio} style={styles.audioButton}>
         🎶 Musike 🎶
@@ -107,6 +133,10 @@ const styles = {
     marginTop: "30px",
     fontSize: "1.1em",
   },
+  videoBlock: {
+    marginTop: "40px",
+    marginBottom: "20px",
+  },
   quote: {
     fontStyle: "italic",
     background: "#eee",
@@ -115,14 +145,23 @@ const styles = {
     margin: "10px auto",
     width: "fit-content",
   },
-  code: {
-    display: "inline-block",
+  input: {
     marginTop: "10px",
-    padding: "8px 12px",
-    backgroundColor: "#000",
+    padding: "10px",
+    borderRadius: "8px",
+    fontSize: "1em",
+    backgroundColor: "#222",
     color: "#fff",
-    fontFamily: "monospace",
-    borderRadius: "6px",
+    border: "1px solid #999",
+  },
+  button: {
+    marginTop: "15px",
+    padding: "10px 20px",
+    backgroundColor: "#111",
+    color: "#fff",
+    border: "none",
+    borderRadius: "10px",
+    cursor: "pointer",
   },
   audioButton: {
     position: "fixed",
