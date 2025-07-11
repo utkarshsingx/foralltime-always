@@ -63,6 +63,9 @@ function Page5() {
         <p>
           That binary number is your <strong>next code</strong>.
         </p>
+        <p>
+          (madame do it and here i thought you enjoyed maths, so find your peace.)
+        </p>
       </div>
 
       <div style={styles.spoilerSection}>

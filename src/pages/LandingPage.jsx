@@ -10,7 +10,7 @@ function LandingPage() {
     if (name.trim().toLowerCase() === 'mahak') {
       navigate('/page1');
     } else {
-      alert('Access denied. Only one soul can enter.');
+      alert('Access denied. Only certain soul can enter.');
     }
   };
 

@@ -12,7 +12,7 @@ function Page1() {
     if (input.trim() === "0816" || input.trim() === "2016") {
       navigate("/page2"); // We'll build this next
     } else {
-      alert("Ayoo... do not test me. Remember the whisper from our past.");
+      alert("(smh) Poor baby.. already giving up 1st one!?");
     }
   };
   useEffect(() => {
@@ -50,7 +50,7 @@ function Page1() {
             <br />
             <br />
             <strong>
-              Enter the date we first messaged~:
+              the date we first messaged~
               <br />
               ahh.. nope this was easy and it isn't going to be easy right!?
               <br />

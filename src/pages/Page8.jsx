@@ -28,12 +28,12 @@ function Page8() {
 
   return (
     <div style={styles.container}>
-      <audio ref={audioRef} loop src="/audio/stars.mp3" />
+      <audio ref={audioRef} loop src="/audio/blue.mp3" />
 
       <h2>A Pleasant Surprise</h2>
 
       <p style={styles.message}>
-        So you’ve remembered me…
+        So you’ve remembered me…!?
         <br />
       </p>
       <img src="/public/always.jpeg" alt="Final Art" style={styles.image} />
@@ -43,10 +43,16 @@ function Page8() {
         <p style={styles.subtitle}>“Where does your soul belong?”</p>
 
         <p style={styles.text}>
-          These playlists... I added them one by one — they’re the songs I grew
-          older with.
+          So this is your birthday gift that I couldn't give, this playlist,
+          they’re the songs I grew older with.
           <br />
-          And maybe, just maybe, you’ll find a piece of me in them.
+          And maybe, you’ll find a piece of me in them. Aww.. that is too much
+          romatic ahh side.
+          <br />
+          <p style={styles.subtitle}>
+            p.s don't fall for me otherwise you'll fall too deep and im secretely
+            a demon (v. naughty one) grr
+          </p>
         </p>
 
         <div style={styles.links}>
@@ -69,9 +75,11 @@ function Page8() {
         </div>
 
         <p style={styles.footnote}>
-          ...you made it. thank you for walking this path.
+          ...anyways you made it. hope you could have enjoyed this small
+          treasure (hunt) of mine.
           <br />
-          (the future? it’s still unwritten. but now, you're a part of mine.)
+          (the future? it’s still unwritten. but for now, your soul rests in my
+          hands.)
         </p>
       </div>
 
