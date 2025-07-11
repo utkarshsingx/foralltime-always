@@ -1,0 +1,158 @@
+import React, { useEffect, useRef } from "react";
+
+function Page8() {
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    audio.volume = 0.4;
+
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        console.log("Autoplay blocked. User interaction needed.");
+      });
+    }
+
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, []);
+
+  const toggleAudio = () => {
+    const audio = audioRef.current;
+    if (audio.paused) audio.play();
+    else audio.pause();
+  };
+
+  return (
+    <div style={styles.container}>
+      <audio ref={audioRef} loop src="/audio/stars.mp3" />
+
+      <h2>A Pleasant Surprise</h2>
+
+      <p style={styles.message}>
+        So you’ve remembered me…
+        <br />
+      </p>
+      <img src="/public/always.jpeg" alt="Final Art" style={styles.image} />
+
+      <div style={styles.section}>
+        <h3>🎶 Choose Your World</h3>
+        <p style={styles.subtitle}>“Where does your soul belong?”</p>
+
+        <p style={styles.text}>
+          These playlists... I added them one by one — they’re the songs I grew
+          older with.
+          <br />
+          And maybe, just maybe, you’ll find a piece of me in them.
+        </p>
+
+        <div style={styles.links}>
+          <a
+            href="https://open.spotify.com/playlist/1Q164nZC4p2NhSVfY7Qasi"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={styles.linkButton}
+          >
+            💖 Spotify
+          </a>
+          <a
+            href="https://music.apple.com/in/playlist/25-07-02/pl.u-mJy8gPBINeAKjdo"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={styles.linkButton}
+          >
+            🍎 Apple Music
+          </a>
+        </div>
+
+        <p style={styles.footnote}>
+          ...you made it. thank you for walking this path.
+          <br />
+          (the future? it’s still unwritten. but now, you're a part of mine.)
+        </p>
+      </div>
+
+      <button onClick={toggleAudio} style={styles.audioButton}>
+        🎶 Musike 🎶
+      </button>
+    </div>
+  );
+}
+
+const styles = {
+  container: {
+    textAlign: "center",
+    padding: "5%",
+    fontFamily: "serif",
+    minHeight: "100vh",
+    position: "relative",
+    color: "#000",
+  },
+  image: {
+    width: "300px",
+    maxWidth: "90%",
+    margin: "20px auto",
+    borderRadius: "12px",
+    boxShadow: "0 0 12px rgba(0,0,0,0.2)",
+  },
+  message: {
+    fontSize: "1.2em",
+    margin: "20px 0",
+  },
+  quote: {
+    fontStyle: "italic",
+    color: "#444",
+  },
+  bold: {
+    fontWeight: "bold",
+    fontSize: "1.3em",
+  },
+  section: {
+    marginTop: "40px",
+  },
+  subtitle: {
+    fontSize: "1.1em",
+    marginBottom: "10px",
+    fontStyle: "italic",
+  },
+  text: {
+    margin: "10px auto 20px",
+    maxWidth: "600px",
+  },
+  links: {
+    display: "flex",
+    justifyContent: "center",
+    gap: "20px",
+    marginBottom: "30px",
+    flexWrap: "wrap",
+  },
+  linkButton: {
+    padding: "10px 20px",
+    backgroundColor: "#111",
+    color: "#fff",
+    borderRadius: "10px",
+    textDecoration: "none",
+    transition: "0.3s",
+  },
+  footnote: {
+    fontSize: "0.95em",
+    color: "#444",
+    fontStyle: "italic",
+  },
+  audioButton: {
+    position: "fixed",
+    top: 20,
+    right: 20,
+    background: "#000",
+    color: "#fff",
+    border: "none",
+    borderRadius: "8px",
+    padding: "8px 16px",
+    cursor: "pointer",
+  },
+};
+
+export default Page8;
