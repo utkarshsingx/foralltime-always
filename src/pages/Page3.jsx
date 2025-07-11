@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 function Page3() {
   const audioRef = useRef(null);
   const videoRef = useRef(null);
-  const navigate = useNavigate();
+//   const navigate = useNavigate();
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -41,8 +41,7 @@ function Page3() {
       {/* 🎵 Background Music */}
       <audio ref={audioRef} loop src="/audio/jumpup.mp3" />
 
-      <h2>Step 3: Giggle & Decode</h2>
-      <p>Let’s see if your laughter can unlock the truth~</p>
+      <h2>you are not so for a goldfish afterall</h2>
 
       <div style={styles.riddleBlock}>
         <p>
@@ -75,7 +74,7 @@ function Page3() {
         <p>Put them together, and unlock the next world of stars ✨</p>
       </div>
 
-      <hr style={{ width: "60%", marginTop: "40px" }} />
+
 
       <h3>🎥 A Message Appears...</h3>
       <p>Before you go, this may give you a clue or make you laugh again.</p>
@@ -103,7 +102,6 @@ const styles = {
     fontFamily: "serif",
     minHeight: "100vh",
     position: "relative",
-    backgroundColor: "#fffaf2",
   },
   riddleBlock: {
     marginTop: "30px",
