@@ -71,11 +71,11 @@ function Page3() {
       {/* 🎥 Video in between */}
       <div style={styles.videoBlock}>
         <h3>🎥 A Secret Shared...</h3>
-        <p>This is something I watch when I need cheering up. So now you know, ha.</p>
+        <p>This is something I watch when I need cheering up. So now, I'll pass the torch to you.</p>
         <video
           ref={videoRef}
           src="/video/jumpupvid.mp4"
-          width="480"
+          width="960"
           controls
           onPlay={handleVideoPlay}
           style={{ marginTop: "20px", borderRadius: "12px" }}

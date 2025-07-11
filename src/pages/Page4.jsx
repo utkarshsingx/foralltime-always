@@ -46,13 +46,15 @@ function Page4() {
         <audio ref={audioRef} loop src="/audio/stars.mp3" />
         <h2>✨ Lovers in the Sky</h2>
         <p style={styles.intro}>
-          On the 11th of July, your sketchbook whispered a tale. You saw the myth. Now tell me:
+          On the 11th of July, your sketchbook whispered a tale. You saw the
+          myth. Now tell me:
         </p>
         <blockquote style={styles.riddle}>
           Two lovers, forever apart, one rises as the other fades.
           <br />
           They meet only once a year, when the Milky Way weeps.
-          <br /><br />
+          <br />
+          <br />
           Who are they?
         </blockquote>
         <p style={styles.hint}>Write their reunion date (in DDMM format)</p>
