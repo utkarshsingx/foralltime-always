@@ -54,7 +54,7 @@ function Page7() {
       <p style={styles.intro}>
         
         To be part of the blood bond, fill it out. Every word is welcome,
-        even the ones you never said--.
+        even the ones you never said--
       </p>
 
       <div style={styles.box}>

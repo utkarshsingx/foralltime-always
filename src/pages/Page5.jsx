@@ -102,7 +102,7 @@ function Page5() {
             peace with it!)
           </i>
           <p style={{ fontSize: "0.8em", opacity: 0.6 }}>
-            actually im running out of ideas rn (╥﹏╥)
+            actually im running out of ideas rn <br/>(╥﹏╥)
           </p>
         </p>
       </div>
