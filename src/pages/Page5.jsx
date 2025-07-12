@@ -43,39 +43,25 @@ function Page5() {
     <div style={styles.container}>
       <audio ref={audioRef} loop src="/audio/touchtone.mp3" />
 
-      <h2>📓 Scrapbook Riddle</h2>
+      <h2>Into the past...</h2>
 
       <p style={styles.intro}>
-        “My memories never lie — but some hide numbers.”
+        <i>“My memories never lie — but some hide numbers.” </i>
         <br />
-        Soo much for teacher’s pet ehh.. eww.. what’s that?
+        Soo much for teacher’s pet ehh.. eww.. who even says such things?
       </p>
 
-      <div style={styles.riddleBox}>
-        <p>
-          Find the marks attained in <strong>Biology</strong>, keep it under a
-          variable <code>x</code>.
-        </p>
-        <p>
-          Now multiply that by <code>10</code>, and then convert the result to{" "}
-          <strong>binary</strong>.
-        </p>
-        <p>
-          That binary number is your <strong>next code</strong>.
-        </p>
-        <p>
-          (madame do it and here i thought you enjoyed maths, so find your peace.)
-        </p>
-      </div>
-
       <div style={styles.spoilerSection}>
-        <button onClick={() => setSpoilerVisible(!spoilerVisible)} style={styles.spoilerButton}>
-          {spoilerVisible ? "🔒 Hide Scrapbook" : "📂 Show Scrapbook"}
+        <button
+          onClick={() => setSpoilerVisible(!spoilerVisible)}
+          style={styles.spoilerButton}
+        >
+          {spoilerVisible ? "come back already" : "go to old times"}
         </button>
         {spoilerVisible && (
           <div style={styles.spoilerBox}>
             <p>
-              🧠 Google Drive Scrapbook:
+              some interesting contents kept safe:
               <br />
               <a
                 href="https://drive.google.com/drive/folders/1oQ3uin2GdjnLqhEu3z3vQT1kXh_8Ox4Y?usp=drive_link"
@@ -87,6 +73,29 @@ function Page5() {
             </p>
           </div>
         )}
+      </div>
+
+      <div style={styles.riddleBox}>
+        <p>
+        ahh.. don't get lost in the past now.. come back, complete what you started!<br/>
+        <i>it's riddle time (੭˃ᴗ˂)੭</i><br/>    
+          something hidden behind the past ventures, from the lesson of life
+          itself, Biology — a mark remains. <br />
+          Multiply that by ten, then whisper it through the circuitry of binary,
+          1s and 0s.<br/><br/>
+          <i>aww.. your face looks like you don't know what im talking about honey <br/></i>
+          <i> look behind that nostalgic pic</i><br/>
+          <br /> What emerges is not just code, but your permission to proceed!
+        </p>
+        <p>
+          <i>
+            (madame do it and here i thought you enjoyed maths, so make your
+            peace with it!)
+          </i>
+          <p style={{ fontSize: "0.8em", opacity: 0.6 }}>
+            actually im running out of ideas rn (╥﹏╥)
+          </p>
+        </p>
       </div>
 
       <form onSubmit={handleSubmit}>
