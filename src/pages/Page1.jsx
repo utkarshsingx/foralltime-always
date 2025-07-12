@@ -12,7 +12,7 @@ function Page1() {
     if (input.trim() === "0816" || input.trim() === "2016") {
       navigate("/page2"); // We'll build this next
     } else {
-      alert("(smh) Poor baby.. already giving up 1st one!?");
+      alert("(smh) Poor baby.. already giving up on 1st one!?");
     }
   };
 
@@ -29,9 +29,9 @@ function Page1() {
       <div style={styles.container}>
         <audio ref={audioRef} loop volume="0.2" src="/audio/lofi.mp3" />
 
-        {/* <h3> Sir, are you a riddler or a rizzler?</h3>
-        <p>Call me whatever, love.</p> */}
-        <h2>Welcome to my world:<br/></h2> <h1>Let the riddles begin</h1>
+         <h3> Sir, are you a riddler or a rizzler?</h3>
+        <p>Call me whatever, love.</p> 
+        <h2>Welcome to my world:</h2> <h1>Let the riddles begin</h1>
         <p>
           On every step you'll be asked something precious...
           <br />
@@ -41,22 +41,23 @@ function Page1() {
           <br />
           <br />
           Hmmm... so enough talk. Let's begin, alright? <br />
-          They're too easy... Let's go!
+          They're too easy... Afterall im a merciful guy!
         </p>
         <form onSubmit={handleCheck}>
           <p>
             All treasures begin with a whisper from the past.
             <br />
-            To unlock your first clue, recall the day our story began for 2nd time.
+            To unlock your first clue, recall the day, you took ur chance<br/> the buried story that began for the 2nd time.
             <br />
             <br />
             <strong>
               the date we first messaged~
               <br />
-              ahh.. nope this was easy and it isn't going to be easy darling, right!?
+              ahh.. nope that was easy and it isn't going to be that easy right, <i>darling!?</i>
               <br />
               Maybe the exact time I first messaged you~ in the form HHMM:
             </strong>
+            <p><i>(do ur work lady!? the game is only beginning)</i></p>
           </p>
           <input
             type="text"
