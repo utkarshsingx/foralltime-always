@@ -23,7 +23,7 @@ function LandingPage() {
         <label>Confirm your identity:</label>
         <br />
         <input
-          type="text"
+          type="password"
           placeholder="Enter your name"
           value={name}
           onChange={(e) => setName(e.target.value)}

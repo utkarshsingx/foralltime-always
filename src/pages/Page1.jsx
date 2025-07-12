@@ -15,6 +15,7 @@ function Page1() {
       alert("(smh) Poor baby.. already giving up 1st one!?");
     }
   };
+
   useEffect(() => {
     // Auto play on load
     audioRef.current.play().catch(() => {
@@ -28,9 +29,9 @@ function Page1() {
       <div style={styles.container}>
         <audio ref={audioRef} loop volume="0.2" src="/audio/lofi.mp3" />
 
-        <h3> Sir, are you a riddler or a rizzler?</h3>
-        <p>Call me whatever, love.</p>
-        <h2>Welcome to my world: Let the riddles begin</h2>
+        {/* <h3> Sir, are you a riddler or a rizzler?</h3>
+        <p>Call me whatever, love.</p> */}
+        <h2>Welcome to my world:<br/></h2> <h1>Let the riddles begin</h1>
         <p>
           On every step you'll be asked something precious...
           <br />
@@ -46,13 +47,13 @@ function Page1() {
           <p>
             All treasures begin with a whisper from the past.
             <br />
-            To unlock your first clue, recall the day our story began.
+            To unlock your first clue, recall the day our story began for 2nd time.
             <br />
             <br />
             <strong>
               the date we first messaged~
               <br />
-              ahh.. nope this was easy and it isn't going to be easy right!?
+              ahh.. nope this was easy and it isn't going to be easy darling, right!?
               <br />
               Maybe the exact time I first messaged you~ in the form HHMM:
             </strong>
@@ -69,6 +70,8 @@ function Page1() {
             Unlock
           </button>
         </form>
+
+        {/* 🎶 Musike - Centered */}
         <button
           onClick={() => {
             const audio = audioRef.current;
@@ -78,13 +81,15 @@ function Page1() {
           style={{
             position: "fixed",
             top: 20,
-            right: 20,
+            left: "50%",
+            transform: "translateX(-50%)",
             background: "#000",
             color: "#fff",
             border: "none",
             borderRadius: "8px",
             padding: "8px 16px",
             cursor: "pointer",
+            zIndex: 10,
           }}
         >
           🎶 Musike 🎶
