@@ -35,7 +35,6 @@ function Page7() {
       "yes, i understand and i want to move forward"
     ) {
         navigate("/page8");
-      // Redirect after form link is opened
     } else {
       setError(
         "❗️Incorrect confirmation. The ritual must be honored precisely."
