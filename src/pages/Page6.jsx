@@ -29,9 +29,14 @@ function Page6() {
     else audio.pause();
   };
 
+  const [showTitle, setShowTitle] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (input.trim().toLowerCase() === "el psy congroo" || input.trim().toLowerCase() === "el psy kongroo") {
+    if (
+      input.trim().toLowerCase() === "el psy congroo" ||
+      input.trim().toLowerCase() === "el psy kongroo"
+    ) {
       navigate("/page7");
     } else {
       alert("Wrong worldline. Try again, Hououin Kyouma style!");
@@ -55,43 +60,13 @@ function Page6() {
         Only <em>you</em> can finish this madness:
       </p>
 
-      <blockquote style={styles.riddle}>“El ___ _______”</blockquote>
+      <blockquote style={styles.riddle}>“El *** *******”</blockquote>
 
-      <p>(Hint: Watch Steins;Gate)</p>
-
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Enter full phrase"
-          style={styles.input}
-        />
-        <br />
-        <button type="submit" style={styles.button}>
-          Unlock Divergence
-        </button>
-      </form>
-
-      <hr style={styles.divider} />
-
-      <h3>🎬 The Choice of Steins;Gate</h3>
-      <p>
-        This series is closest to my heart... if you want to watch it full, of
-        course.
-      </p>
-      <p>
-        But we know the organisations wouldn't want that happening... <br /> so
-        I must reveal what you're looking for you'll get within 75 seconds of
-        1st episode. <br/> So, If you came through hereby and know about my possible
-        plans,
-        <br />I hereby designate you by title of{" "}
-        <strong>“Lab Member 004”</strong>.
-      </p>
+      <p>Hint: Watch Steins;Gate(its my recommendation)</p>
 
       {!showLink ? (
         <button style={styles.revealBtn} onClick={() => setShowLink(true)}>
-          🎥 Reveal Anime Link
+          Reveal Anime Link
         </button>
       ) : (
         <a
@@ -103,6 +78,47 @@ function Page6() {
           🔗 https://animekai.to/watch/steinsgate-4nrw#ep=1
         </a>
       )}
+
+      <hr style={styles.divider} />
+
+      <h3>The Choice of Steins;Gate</h3>
+      <p>
+        This series is closest to my heart... if you want to watch it full, of
+        course.
+      </p>
+      <p>
+        But we know the organisations wouldn't want that happening... <br />{" "}
+        <br /> thus, I must reveal what you're looking for you'll get within 5
+        seconds. <br /> <br />
+        So, If you came through hereby and know about my possible plans,
+        <br />I hereby designate you by title of <br />
+        <br />
+        <span
+          onClick={() => setShowTitle(true)}
+          style={{
+            cursor: "pointer",
+            filter: showTitle ? "none" : "blur(6px)",
+            transition: "filter 0.3s ease",
+            fontWeight: "bold",
+          }}
+        >
+          “Lab Member 004”
+        </span>
+      </p>
+
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="Enter full phrase"
+          style={styles.input}
+        />
+        <br />
+        <button type="submit" style={styles.button}>
+          Unlock Steins Worldline
+        </button>
+      </form>
 
       <button onClick={toggleAudio} style={styles.audioButton}>
         🎶 Musike 🎶
