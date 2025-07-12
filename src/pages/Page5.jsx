@@ -77,14 +77,23 @@ function Page5() {
 
       <div style={styles.riddleBox}>
         <p>
-        ahh.. don't get lost in the past now.. come back, complete what you started!<br/>
-        <i>it's riddle time (੭˃ᴗ˂)੭</i><br/>    
+          ahh.. don't get lost in the past now.. come back, complete what you
+          started!
+          <br />
+          <i>it's riddle time (੭˃ᴗ˂)੭</i>
+          <br />
           something hidden behind the past ventures, from the lesson of life
           itself, Biology — a mark remains. <br />
           Multiply that by ten, then whisper it through the circuitry of binary,
-          1s and 0s.<br/><br/>
-          <i>aww.. your face looks like you don't know what im talking about honey <br/></i>
-          <i> look behind that nostalgic pic</i><br/>
+          1s and 0s.
+          <br />
+          <br />
+          <i>
+            aww.. your face looks like you don't know what im talking about
+            honey <br />
+          </i>
+          <i> look behind that nostalgic pic</i>
+          <br />
           <br /> What emerges is not just code, but your permission to proceed!
         </p>
         <p>
@@ -182,7 +191,8 @@ const styles = {
   audioButton: {
     position: "fixed",
     top: 20,
-    right: 20,
+    right: "50%",
+    transform: "translateX(50%)",
     background: "#000",
     color: "#fff",
     border: "none",

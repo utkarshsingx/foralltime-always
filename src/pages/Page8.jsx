@@ -39,19 +39,19 @@ function Page8() {
       <img src="/public/always.jpeg" alt="Final Art" style={styles.image} />
 
       <div style={styles.section}>
-        <h3>🎶 Choose Your World</h3>
+        <h3>you'll always have a choice.. choose wisely 🎶 </h3>
         <p style={styles.subtitle}>“Where does your soul belong?”</p>
 
         <p style={styles.text}>
-          So this is your birthday gift that I couldn't give, this playlist,
+          So this is your birthday gift that I had made, this playlist,
           they’re the songs I grew older with.
           <br />
-          And maybe, you’ll find a piece of me in them. Aww.. that is too much
+          And maybe, you’ll catch all the time missed and find a piece of me in them. Aww.. this is too much
           romatic ahh side.
           <br />
           <p style={styles.subtitle}>
-            p.s don't fall for me otherwise you'll fall too deep and im secretely
-            a demon (v. naughty one) grr
+            p.s don't fall for me otherwise you'll fall too deep and im
+            secretely a demon (v. naughty one) grr
           </p>
         </p>
 
@@ -78,8 +78,7 @@ function Page8() {
           ...anyways you made it. hope you could have enjoyed this small
           treasure (hunt) of mine.
           <br />
-          (the future? it’s still unwritten. but for now, your soul rests in my
-          hands.)
+          (the future? it’s still unwritten. but, you'll decide how it'll be.)
         </p>
       </div>
 
@@ -153,7 +152,8 @@ const styles = {
   audioButton: {
     position: "fixed",
     top: 20,
-    right: 20,
+    right: "50%",
+    transform: "translateX(50%)",
     background: "#000",
     color: "#fff",
     border: "none",

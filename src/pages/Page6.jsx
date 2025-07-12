@@ -62,7 +62,9 @@ function Page6() {
 
       <blockquote style={styles.riddle}>“El *** *******”</blockquote>
 
-      <p>Hint: Watch Steins;Gate(its my recommendation)</p>
+      <p>
+        Hint: Watch Steins;Gate (its my recommendation - the one you can share)
+      </p>
 
       {!showLink ? (
         <button style={styles.revealBtn} onClick={() => setShowLink(true)}>
@@ -135,7 +137,7 @@ const styles = {
     minHeight: "100vh",
     position: "relative",
     zIndex: 1,
-    color: "#000", // Follows default theme
+    color: "#000",
   },
   intro: {
     fontSize: "1.1em",
@@ -190,7 +192,8 @@ const styles = {
   audioButton: {
     position: "fixed",
     top: 20,
-    right: 20,
+    right: "50%",
+    transform: "translateX(50%)",
     background: "#000",
     color: "#fff",
     border: "none",

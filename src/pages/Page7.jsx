@@ -47,20 +47,19 @@ function Page7() {
 
   return (
     <div style={styles.container}>
-      <audio ref={audioRef} loop src="/audio/stars.mp3" />
+      <audio ref={audioRef} loop src="/audio/Allmyheroes.mp3" />
 
-      <h2>🩸 The Reveal — A Bond Signed in Code</h2>
+      <h2>A Bond Signed in Blood</h2>
 
       <p style={styles.intro}>
-        This is it. A form not just of data, but of memory and meaning.
-        <br />
-        To be part of the **blood bond**, fill it out. Every word is welcome —
-        even the ones you never said.
+        
+        To be part of the blood bond, fill it out. Every word is welcome,
+        even the ones you never said--.
       </p>
 
       <div style={styles.box}>
         <p>
-          🔗 Click below to open the form. After you're done, the path ahead
+          Click below to open the form. After you're done, the path ahead
           shall be revealed.
         </p>
 
@@ -70,15 +69,15 @@ function Page7() {
           }
           style={styles.linkButton}
         >
-          📝 Fill the Ritual Form
+          Fill the Ritual Form
         </button>
       </div>
 
       <hr style={styles.divider} />
 
-      <h3>🚨 Final Confirmation</h3>
+      <h3>Final Confirmation</h3>
       <p style={styles.warning}>
-        If you're unsure, you still have time to turn back.
+        If you're unsure, you still have time to turn back and leave.
         <br />
         But once this gate opens, there's no going back.
       </p>
@@ -178,7 +177,8 @@ const styles = {
   audioButton: {
     position: "fixed",
     top: 20,
-    right: 20,
+    right: "50%",
+    transform: "translateX(50%)",
     background: "#000",
     color: "#fff",
     border: "none",
