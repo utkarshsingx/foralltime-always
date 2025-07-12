@@ -82,7 +82,7 @@ function Page8() {
             ...anyways you made it. hope you could have enjoyed this small
             treasure (hunt) of mine.
             <br />
-            (the future? it’s still unwritten. but, you'll decide how it'll be.)
+            (the future? it’s still unwritten. let your heart decide how it'll be.)
           </p>
         </div>
 
