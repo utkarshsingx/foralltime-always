@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import SakuraBackground from "../components/SakuraBackground";
 
 function Page8() {
   const audioRef = useRef(null);
@@ -27,65 +28,69 @@ function Page8() {
   };
 
   return (
-    <div style={styles.container}>
-      <audio ref={audioRef} loop src="/audio/blue.mp3" />
+    <>
+      <SakuraBackground />
 
-      <h2>A Pleasant Surprise</h2>
+      <div style={styles.container}>
+        <audio ref={audioRef} loop src="/audio/blue.mp3" />
 
-      <p style={styles.message}>
-        So you’ve remembered me…!?
-        <br />
-      </p>
-      <img src="/public/always.jpeg" alt="Final Art" style={styles.image} />
+        <h2>A Pleasant Surprise</h2>
 
-      <div style={styles.section}>
-        <h3>you'll always have a choice.. choose wisely 🎶 </h3>
-        <p style={styles.subtitle}>“Where does your soul belong?”</p>
-
-        <p style={styles.text}>
-          So this is your birthday gift that I had made, this playlist,
-          they’re the songs I grew older with.
+        <p style={styles.message}>
+          So you’ve remembered me…!?
           <br />
-          And maybe, you’ll catch all the time missed and find a piece of me in them. Aww.. this is too much
-          romatic ahh side.
-          <br />
-          <p style={styles.subtitle}>
-            p.s don't fall for me otherwise you'll fall too deep and im
-            secretely a demon (v. naughty one) grr
-          </p>
         </p>
+        <img src="/public/always.jpeg" alt="Final Art" style={styles.image} />
 
-        <div style={styles.links}>
-          <a
-            href="https://open.spotify.com/playlist/1Q164nZC4p2NhSVfY7Qasi"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={styles.linkButton}
-          >
-            💖 Spotify
-          </a>
-          <a
-            href="https://music.apple.com/in/playlist/25-07-02/pl.u-mJy8gPBINeAKjdo"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={styles.linkButton}
-          >
-            🍎 Apple Music
-          </a>
+        <div style={styles.section}>
+          <h3>you'll always have a choice.. choose wisely 🎶 </h3>
+          <p style={styles.subtitle}>“Where does your soul belong?”</p>
+
+          <p style={styles.text}>
+            So this is your birthday gift that I had made, this playlist,
+            they’re the songs I grew older with.
+            <br />
+            And maybe, you’ll catch all the time missed and find a piece of me
+            in them. Aww.. this is too much romatic ahh side.
+            <br />
+            <p style={styles.subtitle}>
+              p.s don't fall for me otherwise you'll fall too deep and im
+              secretely a demon (v. naughty one) grr
+            </p>
+          </p>
+
+          <div style={styles.links}>
+            <a
+              href="https://open.spotify.com/playlist/1Q164nZC4p2NhSVfY7Qasi"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={styles.linkButton}
+            >
+              💖 Spotify
+            </a>
+            <a
+              href="https://music.apple.com/in/playlist/25-07-02/pl.u-mJy8gPBINeAKjdo"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={styles.linkButton}
+            >
+              🍎 Apple Music
+            </a>
+          </div>
+
+          <p style={styles.footnote}>
+            ...anyways you made it. hope you could have enjoyed this small
+            treasure (hunt) of mine.
+            <br />
+            (the future? it’s still unwritten. but, you'll decide how it'll be.)
+          </p>
         </div>
 
-        <p style={styles.footnote}>
-          ...anyways you made it. hope you could have enjoyed this small
-          treasure (hunt) of mine.
-          <br />
-          (the future? it’s still unwritten. but, you'll decide how it'll be.)
-        </p>
+        <button onClick={toggleAudio} style={styles.audioButton}>
+          🎶 Musike 🎶
+        </button>
       </div>
-
-      <button onClick={toggleAudio} style={styles.audioButton}>
-        🎶 Musike 🎶
-      </button>
-    </div>
+    </>
   );
 }
 

@@ -1,0 +1,64 @@
+.sakura-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.petal {
+  background-image: linear-gradient(#ffe1ec, #ffcdd8);
+  display: inline-block;
+  height: 11px;
+  width: 10px;
+  border-radius: 30% 30% 100% 100% / 100%;
+  transform: rotate(45deg);
+  animation: petals-flutter 4s infinite ease-in-out;
+  z-index: 1;
+  opacity: 0.8;
+  position: relative;
+}
+
+.petal:before {
+  content: "";
+  border-bottom: 7px solid #ffe1ec;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  position: absolute;
+  top: -7px;
+  left: 1px;
+}
+
+.petals {
+  position: absolute;
+  will-change: transform;
+  animation-name: petals-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes petals-flutter {
+  0% {
+    transform: rotate(45deg) translateX(0px);
+  }
+  50% {
+    transform: rotate(-45deg) translateX(15px);
+  }
+  100% {
+    transform: rotate(45deg) translateX(0px);
+  }
+}
+
+@keyframes petals-fall {
+  0% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(120vh);
+    opacity: 0;
+  }
+}
