@@ -40,7 +40,7 @@ function Page8() {
           So you’ve remembered me…!?
           <br />
         </p>
-        <img src="/public/always.jpeg" alt="Final Art" style={styles.image} />
+        <img src="/always.jpeg" alt="Final Art" style={styles.image} />
 
         <div style={styles.section}>
           <h3>you'll always have a choice.. choose wisely 🎶 </h3>
