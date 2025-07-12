@@ -65,7 +65,7 @@ function Page4() {
     <div style={styles.wrapper}>
       <ConstellationBackground revealConstellation={reveal} />
       <div style={styles.container}>
-        <audio ref={audioRef} loop src="/audio/stars.mp3" />
+        <audio ref={audioRef} loop src="/audio/Cats.mp3" />
 
         <h2>Secrets of the Celestial Beings</h2>
 
