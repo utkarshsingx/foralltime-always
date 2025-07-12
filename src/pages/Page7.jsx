@@ -34,10 +34,8 @@ function Page7() {
       confirmText.trim().toLowerCase() ===
       "yes, i understand and i want to move forward"
     ) {
-      window.open("https://forms.gle/uJQ5ToE1XsaSPetZ6", "_blank");
-      setTimeout(() => {
         navigate("/page8");
-      }, 3000); // Redirect after form link is opened
+      // Redirect after form link is opened
     } else {
       setError(
         "❗️Incorrect confirmation. The ritual must be honored precisely."
