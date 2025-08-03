@@ -10,14 +10,13 @@ function Page1() {
   const handleCheck = (e) => {
     e.preventDefault();
     if (input.trim() === "0816" || input.trim() === "2016") {
-      navigate("/page2"); // We'll build this next
+      navigate("/page2"); 
     } else {
       alert("(smh) Poor baby.. already giving up on 1st one!?");
     }
   };
 
   useEffect(() => {
-    // Auto play on load
     audioRef.current.play().catch(() => {
       console.log("Autoplay blocked. User must interact first.");
     });
@@ -47,7 +46,7 @@ function Page1() {
           <p>
             All treasures begin with a whisper from the past.
             <br />
-            To unlock your first clue, recall the day, you took ur chance<br/> the buried story that began for the 2nd time.
+            To unlock your first clue, recall the day, you took ur chance<br/> the buried story that relived for the 2nd time.
             <br />
             <br />
             <strong>
@@ -72,7 +71,6 @@ function Page1() {
           </button>
         </form>
 
-        {/* 🎶 Musike - Centered */}
         <button
           onClick={() => {
             const audio = audioRef.current;
