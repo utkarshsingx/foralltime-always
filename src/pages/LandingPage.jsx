@@ -7,7 +7,7 @@ function LandingPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name.trim().toLowerCase() === 'mahak050703' || name.trim().toLowerCase() === 'miku') {
+    if (name.trim().toLowerCase() === 'mahak' || name.trim().toLowerCase() === 'miku') {
       navigate('/page1');
     } else {
       alert('Access denied. Only certain soul can enter.');
